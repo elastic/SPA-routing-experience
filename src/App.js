@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -17,7 +17,7 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Template skipLinkVisible={skipLinkVisible} />}>
           <Route index element={
@@ -40,7 +40,7 @@ const App = () => {
             />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
