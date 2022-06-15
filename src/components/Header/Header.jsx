@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./header.css";
 
 const Header = props => {
   const { handleSkipLink, skipLinkVisible } = props;
@@ -25,10 +26,10 @@ const Header = props => {
   }
 
   return (
-    <header className="elastic-global-header">
-      <nav>
-        <Link to="/" onClick={handleClick}>Home</Link> |{" "}
-        <Link to="/invoices" onClick={handleClick}>Invoices</Link> |{" "}
+    <header className="continuum-global-header">
+      <nav className="continuum-global-nav">
+        <Link to="/" onClick={handleClick}>Home</Link>
+        <Link to="/invoices" onClick={handleClick}>Invoices</Link>
         <Link to="/expenses" onClick={handleClick}>Expenses</Link>
       </nav>
     </header>

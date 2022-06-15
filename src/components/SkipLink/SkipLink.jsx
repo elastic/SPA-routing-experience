@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import "./skiplink.css";
 
 const SkipLink = props => {
   const { skipLinkVisible } = props;
@@ -14,7 +15,7 @@ const SkipLink = props => {
 
   return (
     <a
-      className="elastic-skip-link"
+      className="continuum-skip-link"
       href="#main"
       ref={skipLinkRef}
     >
