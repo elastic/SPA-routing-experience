@@ -17,7 +17,7 @@ const PageLiveRegion = props => {
       aria-atomic="true"
       aria-live="polite"
       aria-relevant="text additions"
-      className="elastic-sr-only"
+      className="continuum-sr-only"
       role="status"
     >
       {`Viewing ${titleState}`}
