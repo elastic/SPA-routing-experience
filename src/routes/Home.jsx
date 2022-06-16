@@ -1,6 +1,7 @@
 import DocumentHead from "../components/DocumentHead/DocumentHead";
 import PageLiveRegion from "../components/PageLiveRegion/PageLiveRegion";
 import Header from "../components/Header/Header";
+import { MAIN_ID } from "../constants";
 
 const Home = props => {
   const {
@@ -15,7 +16,7 @@ const Home = props => {
       <PageLiveRegion pageTitle={pageTitle} />
       <Header handleSkipLink={handleSkipLink} skipLinkVisible={skipLinkVisible} />
 
-      <main className="continuum-global-main" id="main">
+      <main className="continuum-global-main" id={MAIN_ID}>
         <h1>Home</h1>
         <a href="https://github.com/1Copenut/SPA-routing-experience">GitHub link to verify focus</a>
         <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>

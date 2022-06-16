@@ -1,6 +1,7 @@
 import DocumentHead from "../components/DocumentHead/DocumentHead";
 import PageLiveRegion from "../components/PageLiveRegion/PageLiveRegion";
 import Header from "../components/Header/Header";
+import { MAIN_ID } from "../constants";
 
 const Expenses = props => {
   const {
@@ -15,7 +16,7 @@ const Expenses = props => {
       <PageLiveRegion pageTitle={pageTitle} />
       <Header handleSkipLink={handleSkipLink} skipLinkVisible={skipLinkVisible} />
 
-      <main className="continuum-global-main" id="main">
+      <main className="continuum-global-main" id={MAIN_ID}>
         <h1>Expenses</h1>
         <a href="https://github.com/1Copenut/SPA-routing-experience">GitHub link to verify focus</a>
         <p>Expense listings and definitions for our products</p>
