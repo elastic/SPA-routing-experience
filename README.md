@@ -19,5 +19,5 @@ This repo requires you to type a few commands into a terminal window. Commands a
 ## Resources
 * [What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs](https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/)
 * [React Router useLocation hook – Tutorial and Examples](https://www.kindacode.com/article/react-router-uselocation-hook-tutorial-and-examples/)
-* Deploying a CRA React App to GitHub Pages](https://github.com/gitname/react-gh-pages)
+* [Deploying a CRA React App to GitHub Pages](https://github.com/gitname/react-gh-pages)
 * [How to Deploy a Routed React App to GitHub Pages](https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/)
