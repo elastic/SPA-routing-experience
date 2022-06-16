@@ -20,7 +20,7 @@ const SkipLink = props => {
     const target = document.getElementById(MAIN_ID);
     target.scrollIntoView();
     target.setAttribute('tabindex', '-1');
-    target.focus({ preventScroll:true });
+    target.focus({ preventScroll: true });
   }
 
   return (
