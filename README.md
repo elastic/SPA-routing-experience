@@ -1,10 +1,20 @@
-# SPA-routing-experience
-Improving client-side routing in single-page apps (SPAs) through good UX
+# SPA-routing-experience (blue header)
+Improving client-side routing in single-page apps (SPAs) through good UX. This version of the SPA routing experience does the following:
+
+1. Announces route changes to screen readers with a live region
+2. If users click the navigation links with a mouse, focus is handled by the browser **OR**
+3. If users click the navigation links by pressing the `Enter` key, focus is set on the skip to content link
 
 ## A better accessible router and skip link
 It's important to include a skip link for keyboard navigation. It's important to let screen readers know a route was changed client-side. These are fairly simple tasks in isolation, but become more nuanced when you try to do both well, together. This is our attempt at doing just that.
 
-## Getting started
+## Get started testing the user experience
+All examples are hosted on separte GitHub repos as GitHub pages.
+
+1. [Live region with focus set on skip link](https://1copenut.github.io/SPA-routing-experience/)
+1. [Live region with focus set on body tag](https://1copenut.github.io/SPA-routing-experience-body/)
+
+## Get started coding on your machine
 This repo requires you to type a few commands into a terminal window. Commands are shown in code blocks that begin with a dollar sign like this `$ command to type`. You can retype these commands or copy and paste them into your terminal window. Do not include the dollar sign ` $ ` when you type or copy commands into your terminal.
 
 1. Confirm you have NodeJS installed. Open a terminal and type `$ node --version`
@@ -21,3 +31,6 @@ This repo requires you to type a few commands into a terminal window. Commands a
 * [React Router useLocation hook – Tutorial and Examples](https://www.kindacode.com/article/react-router-uselocation-hook-tutorial-and-examples/)
 * [Deploying a CRA React App to GitHub Pages](https://github.com/gitname/react-gh-pages)
 * [How to Deploy a Routed React App to GitHub Pages](https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/)
+
+## Known issues for this solution
+* MacOS Monterey + Safari + VoicOver - Live region announcement is suppressed sometimes. This may be a timing issue, more reseach is needed.
