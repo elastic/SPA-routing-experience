@@ -2,8 +2,9 @@
 Improving client-side routing in single-page apps (SPAs) through good UX. This version of the SPA routing experience does the following:
 
 1. Announces route changes to screen readers with a live region
-2. If users click the navigation links with a mouse, focus is handled by the browser **OR**
-3. If users click the navigation links by pressing the `Enter` key, focus is set on the skip to content link
+2. Focus is set automatically on the live region to ensure screen readers announce it consistently
+3. Pressing `Tab` always sets focus on the skip to main content link
+4. Previously this version made allownances to show / hide the skip link based on mouse or keyboard behavior, but that was factored out for a more unified UX
 
 ## A better accessible router and skip link
 It's important to include a skip link for keyboard navigation. It's important to let screen readers know a route was changed client-side. These are fairly simple tasks in isolation, but become more nuanced when you try to do both well, together. This is our attempt at doing just that.
@@ -33,5 +34,9 @@ This repo requires you to type a few commands into a terminal window. Commands a
 * [Deploying a CRA React App to GitHub Pages](https://github.com/gitname/react-gh-pages)
 * [How to Deploy a Routed React App to GitHub Pages](https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/)
 
+## Tested combinations
+* MacOS Monterey + Safari + VoiceOver
+* MacOS Monterey + Firefox + VoiceOver
+
 ## Known issues for this solution
-* MacOS Monterey + Safari + VoicOver - Live region announcement is suppressed sometimes. This may be a timing issue, more reseach is needed.
+* ~~MacOS Monterey + Safari + VoicOver - Live region announcement is suppressed sometimes. This may be a timing issue, more reseach is needed.~~
