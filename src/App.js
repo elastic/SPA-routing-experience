@@ -1,47 +1,52 @@
 import { useState } from "react";
-import {
-  HashRouter,
-  Routes,
-  Route
-} from "react-router-dom";
-import Home from './routes/Home';
-import Expenses from './routes/Expenses';
-import Invoices from './routes/Invoices';
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import Expenses from "./routes/Expenses";
+import Invoices from "./routes/Invoices";
 import Template from "./routes/Template";
 
 const App = () => {
-  const [ skipLinkVisible, setSkipLinkVisible ] = useState(false);
+  const [currentPageTitle, setCurrentPageTitle] = useState("");
 
-  const handleSkipLink = () => {
-    setSkipLinkVisible(!skipLinkVisible);
-  }
+  const handlePageTitle = (title) => {
+    setCurrentPageTitle(title);
+  };
 
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Template skipLinkVisible={skipLinkVisible} />}>
-          <Route index element={
-            <Home
-              pageTitle="We Say So Homepage"
-              handleSkipLink={handleSkipLink}
-              skipLinkVisible={skipLinkVisible}
-            />} />
-          <Route path="expenses" element={
-            <Expenses
-              pageTitle="We Say So Expenses"
-              handleSkipLink={handleSkipLink}
-              skipLinkVisible={skipLinkVisible}
-            />} />
-          <Route path="invoices" element={
-            <Invoices
-              pageTitle="We Say So Invoices"
-              handleSkipLink={handleSkipLink}
-              skipLinkVisible={skipLinkVisible}
-            />} />
+        <Route path="/" element={<Template pageTitle={currentPageTitle} />}>
+          <Route
+            index
+            element={
+              <Home
+                pageTitle="We Say So Homepage"
+                handlePageTitle={handlePageTitle}
+              />
+            }
+          />
+          <Route
+            path="expenses"
+            element={
+              <Expenses
+                pageTitle="We Say So Expenses"
+                handlePageTitle={handlePageTitle}
+              />
+            }
+          />
+          <Route
+            path="invoices"
+            element={
+              <Invoices
+                pageTitle="We Say So Invoices"
+                handlePageTitle={handlePageTitle}
+              />
+            }
+          />
         </Route>
       </Routes>
     </HashRouter>
   );
-}
+};
 
 export default App;

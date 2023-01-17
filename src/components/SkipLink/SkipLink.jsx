@@ -1,19 +1,8 @@
-import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { MAIN_ID } from "../../constants";
 import "./skiplink.css";
 
-const SkipLink = props => {
-  const { skipLinkVisible } = props;
-  const location = useLocation();
-  const skipLinkRef = useRef(null);
-
-  useEffect(() => {
-    if (skipLinkVisible && skipLinkRef) {
-      skipLinkRef.current.focus();
-    }
-  }, [location, skipLinkVisible]);
-
+const SkipLink = () => {
   const handleClick = e => {
     e.preventDefault();
 
@@ -28,7 +17,6 @@ const SkipLink = props => {
       className="continuum-skip-link"
       href="#main"
       onClick={handleClick}
-      ref={skipLinkRef}
     >
       Skip to content
     </a>
