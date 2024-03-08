@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-const PageLiveRegion = props => {
+const PageLiveRegion = (props) => {
   const { pageTitle } = props;
-  const [ titleState, setTitleState ] = useState('');
+  const [titleState, setTitleState] = useState("");
   const liveRef = useRef(null);
 
   useEffect(() => {
@@ -13,13 +13,13 @@ const PageLiveRegion = props => {
     }
 
     return () => {
-      setTitleState('');
-    }
+      setTitleState("");
+    };
   }, [pageTitle]);
 
   return (
     <div
-      aria-atomic="true"
+      aria-atomic="false"
       aria-live="polite"
       aria-relevant="text additions"
       className="continuum-sr-only"
@@ -30,6 +30,6 @@ const PageLiveRegion = props => {
       {`Viewing ${titleState}`}
     </div>
   );
-}
+};
 
 export default PageLiveRegion;
